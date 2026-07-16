@@ -46,12 +46,6 @@ public class Login2Naukari extends InvokeBrowser {
 
 		UpProfile.clickOnUpdateProfile();
 
-		// String resumepath =
-		// "C:\\Users\\lakha\\Downloads\\03Wed\\JobsWed\\Bangalorewed\\Resume Lakhan
-		// A.pdf";
-		// // this upload resume to profile
-		// uploadRusm.updateResume(wait, resumepath);
-
 		UpProfile2.ClickUpdateResumeHeadline("Resume Headline");
 
 		String heading="Senior Android Developer with 9+ years of experience in Kotlin ,Java,Dart ,Xml,Android SDK,MVVM,JSON,Dagger,JUnit,SQLite,Git ,SVN,Android Development,Project Management,Application Development,Web Application,UI Development, Requirement Analysis.";
@@ -60,80 +54,10 @@ public class Login2Naukari extends InvokeBrowser {
 
 	}
 
-@Test(priority = 1)
-	public void Login2app_bhauji() throws EncryptedDocumentException, IOException, InterruptedException {
-
-		String un="swapnil.welpulwar@gmail.com";
-		String pw="Svojas@123";
-
-		LoginHome.clickLoginOnHome();
-		// LoginHome.LoginNaukari(UtilityData.getExceldata(0, 0), UtilityData.getExceldata(0, 1));
-		LoginHome.LoginNaukari(un,pw);
-
-		UpProfile.clickOnUpdateProfile();
-
-		// String resumepath =
-		// "C:\\Users\\lakha\\Downloads\\03Wed\\JobsWed\\Bangalorewed\\Resume Lakhan
-		// A.pdf";
-		// // this upload resume to profile
-		// uploadRusm.updateResume(wait, resumepath);
-
-		UpProfile2.ClickUpdateResumeHeadline("Resume Headline");
-
-		String heading="HR Operations | SAP SF EC Functional | HR Data Analysis & Power BI Experience | Advance Excel | Power Point";
-		UpProfile2.clickonResumeHeadEditButton(wait, heading);
-		UpProfile2.EditFinalUpdateResumeheading(wait, heading);
-
-	}
-
-
-
-
-
-
-
-
-
-
-	// @Test(priority = 1)
-	// public void Login2app_apurva() throws EncryptedDocumentException,
-	// IOException, InterruptedException {
-	//
-	// LoginHome.clickLoginOnHome();
-	// LoginHome.LoginNaukari(UtilityData.getExceldata(1, 0),
-	// UtilityData.getExceldata(1, 1));
-	//
-	// UpProfile.clickOnUpdateProfile();
-	//
-	//// String resumepath =
-	// "C:\\Users\\lakha\\Downloads\\03Wed\\JobsWed\\Bangalorewed\\Resume Lakhan
-	// A.pdf";
-	//// // this upload resume to profile
-	//// uploadRusm.updateResume(wait, resumepath);
-	//
-	// UpProfile2.ClickUpdateResumeHeadline("Resume Headline");
-	//
-	// UpProfile2.clickonResumeHeadEditButton(wait,UtilityData.getExceldata(1, 2));
-	//
-	// UpProfile2.EditFinalUpdateResumeheading(wait, UtilityData.getExceldata(1,
-	// 2));
-	//
-	// }
-
 	@AfterMethod
 	public void closeBr() {
 		driver.quit();
 	}
-
-	// @AfterMethod
-	// public void logout(ITestResult result) throws InterruptedException,
-	// IOException {
-	// if (result.getStatus() == ITestResult.FAILURE) {
-	//
-	// UtilityData.captureScreenShot(driver);
-	// }
-	//
-	// }
 
 	@AfterClass
 	public void ClearAll() {
