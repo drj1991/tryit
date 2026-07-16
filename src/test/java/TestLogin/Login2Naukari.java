@@ -37,8 +37,8 @@ public class Login2Naukari extends InvokeBrowser {
 	@Test(priority = 0)
 	public void Login2app_lakhan() throws EncryptedDocumentException, IOException, InterruptedException {
 
-		String un="lakhanasubhash@gmail.com";
-		String pw="bv$S6X92tLd!9zZ";
+		String un="dhiraj.gurunule1991@gmail.com";
+		String pw="findJob@2026";
 
 		LoginHome.clickLoginOnHome();
 		// LoginHome.LoginNaukari(UtilityData.getExceldata(0, 0), UtilityData.getExceldata(0, 1));
@@ -54,7 +54,7 @@ public class Login2Naukari extends InvokeBrowser {
 
 		UpProfile2.ClickUpdateResumeHeadline("Resume Headline");
 
-		String heading="Senior Software Engineer (Testing) | 3.5 yrs Web/Mobile/API automation & manual testing | Selenium, Appium, Playwright, Cucumber, REST Assured | Python/Java/JavaScript | Scalable frameworks, CI/CD (Jenkins), JIRA, Agile | AI enthusiast.";
+		String heading="Senior Android Developer with 9+ years of experience in Kotlin ,Java,Dart ,Xml,Android SDK,MVVM,JSON,Dagger,JUnit,SQLite,Git ,SVN,Android Development,Project Management,Application Development,Web Application,UI Development, Requirement Analysis.";
 		UpProfile2.clickonResumeHeadEditButton(wait, heading);
 		UpProfile2.EditFinalUpdateResumeheading(wait, heading);
 
