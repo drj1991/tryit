@@ -1,0 +1,34 @@
+pipeline{
+    agent any
+    stages{
+        stage("Delete Workspace"){
+            steps{
+                echo "deleting workspace"
+                deleteDir()
+            }
+        }
+        stage("Clone Repository"){
+            steps{
+                echo "cloning repository"
+                bat "git clone https://github.com/lakhanadewar/NUpdater.git"
+            }
+        }
+        stage("Navigate to Directory"){
+            steps{
+                dir("NUpdater"){
+                    echo "Navigated to NUpdater directory"
+                }
+            }
+        }
+        stage("Build Project"){
+            
+            steps{
+            dir("NUpdater"){    bat "mvn clean install"}
+            }
+        }
+        stage("Run Tests"){
+            steps{
+               dir("NUpdater"){bat "mvn clean test"} 
+            }
+        }
+}}
